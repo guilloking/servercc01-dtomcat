@@ -1,0 +1,11 @@
+version: '3.8'
+
+services: 
+    app1: 
+        build: .
+        restart: always
+        working_dir: /usr/local/tomcat/webapps
+        volumes: 
+            - ./src/:/usr/local/tomcat/webapps
+        ports: 
+            - '8085:8080'
